@@ -25,7 +25,7 @@ Sends notification if flame is sensed via HTTP REST Request to custom API App wh
 ## Steps to Run the App Service API App
 1. Download all of the files in the repository
 2. Open the solution in Visual Studio
-3. Update the FlameSensor.AppService\Web.config file with your API App Enpoint connection string and save it
+3. Update the FlameSensor.AppService\Web.config file with your API App Enpoint connection string and save it (ex. `Endpoint=sb://kristinottofyflamesensor.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=07/OdwTJuMV+Lu9Ig5af47lLnGRGIWX6xFjmOKFDE1I=`)
 4. Build the App Service project
 5. Publish the App Service project to an Azure Web API App
 
