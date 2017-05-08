@@ -1,13 +1,15 @@
 # FlameSensor
 Sends notification if flame is sensed via HTTP REST Request to custom API App which inserts a message into a Service Bus Queue that triggers a Logic App to send an SMS notification.
 
-## Technologies
+## Hardware
 - Raspberry Pi 2 Model B v1.1
+- Flame Sensor (ex. Keyes KY-026)
+
+## Technologies
 - Windows 10 IoT Core
 - Windows UWP App on Pi
 - Windows UWP IoT Extension
 - .NET Core App on App Service
-- Flame Sensor (ex. Keyes KY-026)
 - Azure App Service
 - API Management (REST API)
 - Event Hub
@@ -21,14 +23,15 @@ Sends notification if flame is sensed via HTTP REST Request to custom API App wh
 
 1. [Create Service Bus Queue](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues) 
 2. Create a Logic App to trigger on new message in the queue and send to email, SMS with twilio, or to do whatever you'd like!
-![logic app](images/flame-sensor-logic-app.png)
+
+    ![logic app](images/flame-sensor-logic-app.png)
 
 ## Steps to Run the App Service API App
 1. Download all of the files in the repository
 2. Open the solution in Visual Studio
 3. Update the FlameSensor.AppService\Web.config file with your Service Bus Queue Endpoint connection string and save it (ex. `Endpoint=sb://kristinottofyflamesensor.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=07/OdwTJuMV+Lu9Ig5af47lLnGRGIWX6xFjmOKFDE1I=`)
 4. Build the App Service project
-5. Publish the App Service project to an Azure Web API App
+5. Publish the App Service project to a custom and unique Azure Web API App
 
 ## Steps to run the Raspberry Pi App
 1. Change the run mode in Visual Studio to Remote Machine
