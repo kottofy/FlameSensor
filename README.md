@@ -1,6 +1,8 @@
 # FlameSensor
 Sends notification if flame is sensed via HTTP REST Request to custom API App which inserts a message into a Service Bus Queue that triggers a Logic App to send an SMS notification.
 
+[![Watch the video](images/flame-sensor-video.png)](https://youtu.be/W4WF8wUPzH0)
+
 ## Hardware
 - Raspberry Pi 2 Model B v1.1
 - Flame Sensor (ex. Keyes KY-026)
